@@ -21,30 +21,39 @@
 
 // traits are similar to interfaces in Java/Js
 
-trait Shape {
-    fn area(&self) -> f32;
-}
+// trait Shape {
+//     fn area(&self) -> f32;
+// }
 
-// Struct is used to implement traits
+// // Struct is used to implement traits
 
-struct Rect {
-    width: f32,
-    height: f32,
-}
+// struct Rect {
+//     width: f32,
+//     height: f32,
+// }
 
-impl Shape for Rect {
-    fn area(&self) -> f32 {
-        return self.width * self.height;
-    }
-}
+// impl Shape for Rect {
+//     fn area(&self) -> f32 {
+//         return self.width * self.height;
+//     }
+// }
 
-// functions that accepts any type implementing Shape
-fn get_area(shape: impl Shape) -> f32 {
-    return shape.area()
-}
+// // functions that accepts any type implementing Shape
+// fn get_area(shape: impl Shape) -> f32 {
+//     return shape.area()
+// }
 
+// fn main () {
+//     let rect = Rect {width: 10.0, height: 5.0 };
+//     let area = get_area(rect);
+//     println!("Area of rect {}", area);
+// }
+
+
+// Showding
 fn main () {
-    let rect = Rect {width: 10.0, height: 5.0 };
-    let area = get_area(rect);
-    println!("Area of rect {}", area);
+    let a = 10;
+    println!("{}", a);
+    let a = 5;
+    println!("{}", a);
 }
