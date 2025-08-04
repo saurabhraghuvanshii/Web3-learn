@@ -51,9 +51,25 @@
 
 
 // Showding
+// fn main () {
+//     let a = 10;
+//     println!("{}", a);
+//     let a = 5;
+//     println!("{}", a);
+// }
+
+struct Car {
+    name: String,
+    brand: String,
+    model: i32
+}
+
 fn main () {
-    let a = 10;
-    println!("{}", a);
-    let a = 5;
-    println!("{}", a);
+    let c = Car {
+        name: "bmw".to_string(),
+        brand: "m4".to_string(),
+        model: 4
+    };
+
+    println!("{}, {}, {}", c.brand, c.name, c.model);
 }
