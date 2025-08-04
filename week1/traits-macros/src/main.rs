@@ -77,23 +77,34 @@
 // Enums
 // Enums are types which have a few definite values
 
-enum CarType {
-    Sedan,
-    Suv
-}
+// enum CarType {
+//     Sedan,
+//     Suv
+// }
 
-fn print_size( car: CarType ) {
-    match car {
-        CarType::Sedan => {
-            println!("small car");
-        },
-        CarType::Suv => {
-            println!("big size");
-        }
-    }
-}
+// fn print_size( car: CarType ) {
+//     match car {
+//         CarType::Sedan => {
+//             println!("small car");
+//         },
+//         CarType::Suv => {
+//             println!("big size");
+//         }
+//     }
+// }
 
-fn main () {
-    print_size(CarType::Sedan);
-    print_size(CarType::Suv);
+// fn main () {
+//     print_size(CarType::Sedan);
+//     print_size(CarType::Suv);
+// }
+
+
+fn main() {
+    let ints = [1, 2, 3, 4, 5];
+    let slice1 = &ints[0..2];
+    let slice2 = &ints[1..];  // open range!
+
+    println!("ints {:?}", ints);
+    println!("slice1 {:?}", slice1);
+    println!("slice2 {:?}", slice2);
 }
