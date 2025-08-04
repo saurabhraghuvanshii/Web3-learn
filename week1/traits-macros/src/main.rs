@@ -58,18 +58,42 @@
 //     println!("{}", a);
 // }
 
-struct Car {
-    name: String,
-    brand: String,
-    model: i32
+// struct Car {
+//     name: String,
+//     brand: String,
+//     model: i32
+// }
+
+// fn main () {
+//     let c = Car {
+//         name: "bmw".to_string(),
+//         brand: "m4".to_string(),
+//         model: 4
+//     };
+
+//     println!("{}, {}, {}", c.brand, c.name, c.model);
+// }
+
+// Enums
+// Enums are types which have a few definite values
+
+enum CarType {
+    Sedan,
+    Suv
+}
+
+fn print_size( car: CarType ) {
+    match car {
+        CarType::Sedan => {
+            println!("small car");
+        },
+        CarType::Suv => {
+            println!("big size");
+        }
+    }
 }
 
 fn main () {
-    let c = Car {
-        name: "bmw".to_string(),
-        brand: "m4".to_string(),
-        model: 4
-    };
-
-    println!("{}, {}, {}", c.brand, c.name, c.model);
+    print_size(CarType::Sedan);
+    print_size(CarType::Suv);
 }
